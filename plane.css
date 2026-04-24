@@ -1,0 +1,409 @@
+@import url("https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  animation-name: myAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+  text-align: center;
+  font-family: "Sn Pro";
+  background-color: #bfc9d1;
+}
+@keyframes myAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.theme-btn {
+  background: #25343f;
+  color: #eaffef;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark-mode .theme-btn {
+  background: #eaffef;
+  color: #25343f;
+}
+
+body.dark-mode {
+  background-color: #121418 !important;
+  color: #ecf0f1 !important;
+}
+
+body.dark-mode nav {
+  background-color: #1c1f26;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode nav a,
+body.dark-mode nav ul li a {
+  color: #ffffff;
+}
+
+body.dark-mode .boeing,
+body.dark-mode .airbus,
+body.dark-mode .f-14,
+body.dark-mode .f-18 {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sayfa {
+  display: none;
+}
+
+#anasayfa {
+  display: block;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  background-color: #eaffef;
+  padding: 30px;
+  box-shadow: 10px 20px 10px #362f4f;
+  border-radius: 4px;
+}
+
+nav a {
+  color: #25343f;
+}
+
+nav ul {
+  display: flex;
+  gap: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+nav .bxs-plane-alt {
+  font-size: 52px;
+  cursor: pointer;
+}
+
+nav ul li {
+  list-style: none;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+nav ul a {
+  display: inline-block;
+  text-decoration: none;
+  color: #25343f;
+}
+
+nav ul a.active-link {
+  color: #4d2fb2;
+  font-weight: bold;
+}
+
+nav ul a:after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: black;
+  transition: 300ms;
+}
+
+nav ul a:hover {
+  color: #4d2fb2;
+  transition: 0.3s;
+  transform: translateY(-3px);
+}
+
+nav ul a:hover:after {
+  width: 100%;
+}
+
+.hero-section {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(fotoğraflar/photo-1543903905-cee4ab46985c.avif);
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 15px;
+  margin: 20px;
+  background-attachment: scroll;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #4d2fb2;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: #eaffef;
+  color: #4d2fb2;
+  transform: scale(1.1);
+}
+
+.sayfa p {
+  font-size: 32px;
+  padding: 10px 10px;
+}
+
+.sayfa h3 {
+  font-size: 42px;
+}
+
+.plane1,
+.plane2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  padding: 0 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.sayfa h3 {
+  font-size: 42px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.boeing,
+.airbus,
+.f-14,
+.f-18 {
+  flex: 1;
+  min-width: 300px;
+  max-width: 48%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 25px;
+  border-radius: 20px;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.boeing:hover,
+.airbus:hover,
+.f-14:hover,
+.f-18:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.boeing p,
+.airbus p,
+.f-14 p,
+.f-18 p {
+  font-weight: 200;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.boeing img,
+.airbus img,
+.f-14 img,
+.f-18 img {
+  max-width: 500px;
+  width: 90%;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+  cursor: pointer;
+}
+
+.boeing img:hover,
+.airbus img:hover,
+.f-14 img:hover,
+.f-18 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3) !important;
+}
+
+.boeing ul,
+.airbus ul,
+.f-14 ul,
+.f-18 ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.boeing ul li,
+.airbus ul li,
+.f-14 ul li,
+.f-18 ul li {
+  background: rgba(0, 0, 0, 0.05);
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px !important;
+}
+
+body.dark-mode .boeing,
+body.dark-mode .airbus,
+body.dark-mode .f-14,
+body.dark-mode .f-18 {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.sayfa footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #222;
+  padding: 20px 0;
+  border-radius: 5px;
+}
+
+footer h2 {
+  color: #f5f5f5;
+  margin-bottom: 15px;
+}
+
+.social-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Sabit margin yerine gap kullanımı daha düzenlidir */
+  flex-wrap: wrap;
+}
+
+.social-box a {
+  background: #f5f5f5;
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: 1px solid #f5f5f5;
+  transition: all 0.3s ease;
+  margin-right: 0 !important;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-box a:hover {
+  background: #4d2fb2;
+  color: white !important;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px #4d2fb2;
+}
+
+body.dark-mode {
+  background-color: #1a1d23;
+  color: #e0e6ed;
+}
+
+body.dark-mode nav {
+  background-color: #252a34;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode nav a,
+body.dark-mode nav ul li a {
+  color: #ffffff;
+}
+
+body.dark-mode .boeing,
+body.dark-mode .airbus,
+body.dark-mode .f-14,
+body.dark-mode .f-18 {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Lightbox Arka Planı */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  cursor: zoom-out;
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  animation: zoom 0.3s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 60px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boeing img,
+.airbus img,
+.f-14 img,
+.f-18 img {
+  cursor: pointer;
+}
