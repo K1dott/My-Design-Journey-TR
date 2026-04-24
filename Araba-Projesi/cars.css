@@ -12,7 +12,7 @@
   width: 100%;
   height: 100vh;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.6)), url(Forograflar/bg.png);
+    linear-gradient(rgba(0, 0, 0, 0.6)), url(Fotograflar/bg.png);
   background-position: center;
   background-size: cover;
 }
